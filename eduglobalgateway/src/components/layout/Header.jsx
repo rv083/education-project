@@ -1,4 +1,5 @@
 // src/components/layout/Header.jsx
+// Header + Topbar
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
