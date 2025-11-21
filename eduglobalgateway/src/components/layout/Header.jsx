@@ -84,21 +84,28 @@ export default function Header() {
             </div>
           </div>
 
-          <a href="#services" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
-            Career Counselling
-          </a>
+          <Link
+  to="/#career"
+  className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap"
+>
+  Career Counselling
+</Link>
 
-          <a href="#corporate" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
-            Corporate Training
-          </a>
+<Link
+  to="/#corporate"
+  className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap"
+>
+  Corporate Training
+</Link>
+
 
           <a href="#universities" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Universities
           </a>
 
-          <a href="#advisory" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
-            Advisory Board
-          </a>
+          <Link to="/Advisory_Board" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
+             Advisory Board
+          </Link>
 
           <Link to="/about" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             About Us
@@ -179,7 +186,9 @@ export default function Header() {
             <li><a href="#services" className="block px-2 py-2 rounded hover:bg-blue-50">Career Counselling</a></li>
             <li><a href="#corporate" className="block px-2 py-2 rounded hover:bg-blue-50">Corporate Training</a></li>
             <li><a href="#universities" className="block px-2 py-2 rounded hover:bg-blue-50">Universities</a></li>
-            <li><a href="#advisory" className="block px-2 py-2 rounded hover:bg-blue-50">Advisory Board</a></li>
+            <li><Link to="/AdvisoryBoard" className="block px-2 py-2 rounded hover:bg-blue-50">
+                Advisory Board
+              </Link></li>
 
             <li>
               <Link to="/about" className="block px-2 py-2 rounded hover:bg-blue-50">
