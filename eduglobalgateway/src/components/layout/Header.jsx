@@ -1,5 +1,6 @@
 // src/components/layout/Header.jsx
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 export default function Header() {
@@ -27,28 +28,31 @@ export default function Header() {
         "
       >
         {/* Left — Logo + Title */}
-        <div className="flex items-center gap-3">
-          <div className="p-1.5 bg-white rounded-xl shadow-sm border border-blue-100">
+        <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Perfect square non-stretching logo box */}
+          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white rounded-xl shadow-sm border border-blue-100 overflow-hidden">
             <img
               src={logo}
               alt="EduGlobal_logo"
-              className="h-16 w-auto object-contain drop-shadow-sm md:h-20"
+              className="w-12 h-12 md:w-16 md:h-16 object-contain block"
             />
           </div>
-          <div>
-            <h1 className="text-xl md:text-2xl font-extrabold text-blue-700">
+
+          <div className="whitespace-nowrap">
+            <h1 className="text-xl md:text-2xl font-extrabold text-blue-700 leading-none">
               EduGlobalGateway
             </h1>
-            <p className="text-xs md:text-sm text-slate-500">
+            <p className="text-xs md:text-sm text-slate-500 leading-tight">
               Your pathway to study abroad
             </p>
           </div>
         </div>
 
         {/* Center — Navigation */}
-        <nav className="hidden md:flex items-center justify-center gap-8 text-[15px] font-medium">
+        <nav className="hidden md:flex items-center justify-center gap-6 text-[15px] font-medium flex-nowrap whitespace-nowrap">
+
           <div className="relative group">
-            <button className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition">
+            <button className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
               Study Abroad
               <svg
                 className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
@@ -71,7 +75,7 @@ export default function Header() {
                 <a
                   key={i}
                   href="#"
-                  className="block px-5 py-3 text-sm text-slate-700 hover:bg-blue-50/70 hover:text-blue-700 rounded-lg transition-colors duration-200 text-center"
+                  className="block px-5 py-3 text-sm text-slate-700 hover:bg-blue-50/70 hover:text-blue-700 rounded-lg transition-colors duration-200 text-center whitespace-nowrap"
                 >
                   {item}
                 </a>
@@ -79,36 +83,25 @@ export default function Header() {
             </div>
           </div>
 
-          <a
-            href="#services"
-            className="text-slate-700 hover:text-blue-600 transition"
-          >
+          <a href="#services" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Career Counselling
           </a>
-          <a
-            href="#corporate"
-            className="text-slate-700 hover:text-blue-600 transition"
-          >
+
+          <a href="#corporate" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Corporate Training
           </a>
-          <a
-            href="#universities"
-            className="text-slate-700 hover:text-blue-600 transition"
-          >
+
+          <a href="#universities" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Universities
           </a>
-          <a
-            href="#advisory"
-            className="text-slate-700 hover:text-blue-600 transition"
-          >
+
+          <a href="#advisory" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Advisory Board
           </a>
-          <a
-            href="#about"
-            className="text-slate-700 hover:text-blue-600 transition"
-          >
+
+          <Link to="/about" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             About Us
-          </a>
+          </Link>
         </nav>
 
         {/* Right — Contact Button */}
@@ -134,12 +127,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
               <svg
@@ -149,12 +137,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>
@@ -172,75 +155,37 @@ export default function Header() {
               >
                 Study Abroad
                 <svg
-                  className={`w-4 h-4 transition-transform ${
-                    studyDropdownOpen ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform ${studyDropdownOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
+                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+
               {studyDropdownOpen && (
                 <div className="mt-1 ml-4 flex flex-col gap-1">
                   {["IELTS / PTE", "SOP / LOR", "Profiling"].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="px-2 py-2 rounded hover:bg-blue-50 text-slate-700"
-                    >
+                    <a key={i} href="#" className="px-2 py-2 rounded hover:bg-blue-50 text-slate-700">
                       {item}
                     </a>
                   ))}
                 </div>
               )}
             </li>
+
+            <li><a href="#services" className="block px-2 py-2 rounded hover:bg-blue-50">Career Counselling</a></li>
+            <li><a href="#corporate" className="block px-2 py-2 rounded hover:bg-blue-50">Corporate Training</a></li>
+            <li><a href="#universities" className="block px-2 py-2 rounded hover:bg-blue-50">Universities</a></li>
+            <li><a href="#advisory" className="block px-2 py-2 rounded hover:bg-blue-50">Advisory Board</a></li>
+
             <li>
-              <a
-                href="#services"
-                className="block px-2 py-2 rounded hover:bg-blue-50"
-              >
-                Career Counselling
-              </a>
-            </li>
-            <li>
-              <a
-                href="#corporate"
-                className="block px-2 py-2 rounded hover:bg-blue-50"
-              >
-                Corporate Training
-              </a>
-            </li>
-            <li>
-              <a
-                href="#universities"
-                className="block px-2 py-2 rounded hover:bg-blue-50"
-              >
-                Universities
-              </a>
-            </li>
-            <li>
-              <a
-                href="#advisory"
-                className="block px-2 py-2 rounded hover:bg-blue-50"
-              >
-                Advisory Board
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="block px-2 py-2 rounded hover:bg-blue-50"
-              >
+              <Link to="/about" className="block px-2 py-2 rounded hover:bg-blue-50">
                 About Us
-              </a>
+              </Link>
             </li>
+
             <li>
               <a
                 href="#contact"

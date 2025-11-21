@@ -7,7 +7,8 @@ import ServiceGrid from '../components/sections/ServiceGrid';
 import FAQ from '../components/sections/FAQ';
 import Footer from '../components/layout/Footer';
 import AboutIntro from '../components/sections/AboutIntro';
-
+import CorporateTraining from '../components/sections/CorporateTraining';
+import CareerCounselling from '../components/sections/CareerCounselling';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -18,6 +19,8 @@ export default function Home() {
         <AboutIntro />
         <Counters />
         <Countries />
+        <CorporateTraining />
+        <CareerCounselling />
         <ServiceGrid />
         <FAQ />
       </main>
