@@ -183,10 +183,21 @@ export default function Header() {
               )}
             </li>
 
-            <li><a href="#services" className="block px-2 py-2 rounded hover:bg-blue-50">Career Counselling</a></li>
-            <li><a href="#corporate" className="block px-2 py-2 rounded hover:bg-blue-50">Corporate Training</a></li>
+  <Link
+  to="/#career"
+  className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap"
+>
+  Career Counselling
+</Link>
+
+<Link
+  to="/#corporate"
+  className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap"
+>
+  Corporate Training
+</Link>
             <li><a href="#universities" className="block px-2 py-2 rounded hover:bg-blue-50">Universities</a></li>
-            <li><Link to="/AdvisoryBoard" className="block px-2 py-2 rounded hover:bg-blue-50">
+            <li><Link to="/Advisory_Board" className="block px-2 py-2 rounded hover:bg-blue-50">
                 Advisory Board
               </Link></li>
 
