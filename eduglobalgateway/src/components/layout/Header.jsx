@@ -2,7 +2,8 @@
 // Header + Topbar
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_embedded.svg";
+
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,6 +15,7 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header
@@ -29,13 +31,24 @@ export default function Header() {
         "
       >
         {/* Left — Logo + Title */}
-        <div className="flex items-center gap-3 flex-shrink-0">
+        {/* <div className="flex items-center gap-3 flex-shrink-0"> */}
           {/* Perfect square non-stretching logo box */}
-          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white rounded-xl shadow-sm border border-blue-100 overflow-hidden">
+          {/* <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white rounded-xl shadow-sm border border-blue-100 overflow-hidden">
             <img
               src={logo}
               alt="EduGlobal_logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain block"
+            />
+          </div> */}
+
+          {/* Left — Logo + Title */}
+        <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Logo (SVG) — removed the background box; increased size */}
+          <div className="flex items-center justify-center">
+            <img
+              src={logo}
+              alt="EduGlobalGateway Logo"
+              className="w-20 h-20 md:w-28 md:h-28 object-contain block"
             />
           </div>
 
