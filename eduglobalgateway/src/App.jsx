@@ -12,7 +12,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />  {/* NEW ROUTE */}
-      <Route path="/Advisory_Board" element={<AdvisoryBoard />} />
+      <Route path="/advisory-board" element={<AdvisoryBoard />} />
     </Routes>
     </>
   );

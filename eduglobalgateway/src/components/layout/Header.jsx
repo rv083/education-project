@@ -103,7 +103,7 @@ export default function Header() {
             Universities
           </a>
 
-          <Link to="/Advisory_Board" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
+          <Link to="/advisory-board" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
              Advisory Board
           </Link>
 
@@ -197,7 +197,7 @@ export default function Header() {
   Corporate Training
 </Link>
             <li><a href="#universities" className="block px-2 py-2 rounded hover:bg-blue-50">Universities</a></li>
-            <li><Link to="/Advisory_Board" className="block px-2 py-2 rounded hover:bg-blue-50">
+            <li><Link to="/advisory-board" className="block px-2 py-2 rounded hover:bg-blue-50">
                 Advisory Board
               </Link></li>
 
