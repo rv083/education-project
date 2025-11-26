@@ -6,46 +6,64 @@ import logo from "../../assets/logo_embedded.svg";
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [studyDropdownOpen, setStudyDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // toggles bg/shadow after small scroll
+  const [hidden, setHidden] = useState(false); // hides header on scroll down
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    let lastY = typeof window !== "undefined" ? window.scrollY : 0;
+    let ticking = false;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+
+      // small threshold for background/shadow
+      setScrolled(y > 40);
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // if scrolling down and scrolled beyond threshold -> hide header
+          if (y > lastY && y > 80) {
+            setHidden(true);
+          } else if (y < lastY) {
+            // scrolling up -> show header
+            setHidden(false);
+          }
+          lastY = y;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`w-full top-0 left-0 z-50 sticky transition-all duration-300 ${
+      // Keep sticky and animate with translateY for consistent hide/show behavior
+      className={`w-full top-0 left-0 z-50 sticky transition-transform duration-300 ${
         scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
+      style={{ willChange: "transform" }}
     >
-     {/* Top: Logo and Text close together, both very large */}
-<div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-center gap-4 md:gap-6">
-  
-  {/* Big Logo — scaled visually without increasing layout size */}
-  <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-  <img
-    src={logo}
-    alt="EduGlobalGateway Logo"
-    className="object-contain scale-125"
-  />
-</div>
+      {/* Top: Logo and Text close together, both very large */}
+      <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-center gap-4 md:gap-6">
+        {/* Big Logo — scaled visually without increasing layout size */}
+        <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+          <img src={logo} alt="EduGlobalGateway Logo" className="object-contain scale-125" />
+        </div>
 
-
-  {/* Big Name + Tagline */}
-  <div className="flex flex-col text-left">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 leading-tight">
-      EduGlobalGateway
-    </h1>
-    <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1
-">
-      Your pathway to study abroad
-    </p>
-  </div>
-</div>
-
-
+        {/* Big Name + Tagline */}
+        <div className="flex flex-col text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 leading-tight">
+            EduGlobalGateway
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1">
+            Your pathway to study abroad
+          </p>
+        </div>
+      </div>
 
       {/* Bottom: Navigation bar */}
       <nav className="w-full border-t border-b bg-white/0 relative z-40">
