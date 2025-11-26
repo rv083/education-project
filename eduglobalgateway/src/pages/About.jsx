@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import shivImg from "../assets/shiv.jpg";
+import yaminiImg from "../assets/yamini.jpg";
 
 export default function About() {
   return (
@@ -120,28 +122,117 @@ export default function About() {
 
         {/* ==================== Founders ==================== */}
         <section className="py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-extrabold text-blue-800 text-center"
-            >
-              Founders
-            </motion.h2>
+  <div className="max-w-5xl mx-auto px-6">
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="mt-8 text-slate-600 text-center text-lg"
-            >
-              Founder details coming soon...
-            </motion.p>
-          </div>
-        </section>
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-3xl md:text-4xl font-extrabold text-blue-800 text-center"
+    >
+      Founders
+    </motion.h2>
+
+    {/* Box wrapper */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="mt-10 bg-white border border-blue-100 shadow-md rounded-2xl p-10"
+    >
+      {/* Two founders side-by-side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
+
+        {/* Founder - Shiv Kumar */}
+        <div className="text-center">
+          <img
+            src={shivImg}
+            alt="Prof. (Dr.) Shiv Kumar - Co-Founder & Director, EduGlobal Gateway"
+            className="w-56 h-56 object-contain rounded-xl mx-auto shadow-md"
+            loading="lazy"
+          />
+          <h3 className="mt-5 text-xl font-semibold text-slate-800">
+            Prof. (Dr.) Shiv Kumar
+          </h3>
+          <p className="text-blue-600 font-medium">Co-Founder & Director</p>
+          <p className="text-slate-800 font-bold text-sty mt-2 text-sm leading-relaxed">
+            Over 20+ years of experience in academia and corporate with
+            B.E. (CSE), MBA – Australia, Ph.D. – Management
+          </p>
+        </div>
+
+        {/* Founder - Yamini Pandey */}
+        <div className="text-center">
+          <img
+            src={yaminiImg}
+            alt="Prof. (Dr.) Yamini Pandey - Co-Founder & Director, EduGlobal Gateway"
+            className="w-56 h-56 object-contain rounded-xl mx-auto shadow-md"
+            loading="lazy"
+          />
+          <h3 className="mt-5 text-xl font-semibold text-slate-800">
+            Prof. (Dr.) Yamini Pandey
+          </h3>
+          <p className="text-blue-600 font-medium">Co-Founder & Director</p>
+          <p className="text-slate-800 font-bold mt-2 text-sm leading-relaxed">
+            Researcher with Ph.D. in Management and 18+ years of experience
+            in academia and student affairs
+          </p>
+        </div>
+
+      </div>
+
+      {/* Message below */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="mt-10"
+      >
+        <div className="max-w-3xl mx-auto text-slate-600 text-center text-lg leading-relaxed">
+          <p>Dear Students and Parents,</p>
+
+          <p className="mt-4">
+            It gives immense pleasure to welcome you to EduGlobal Gateway consultancy
+            where we empower you with global education, a gateway for a successful
+            academic journey.
+          </p>
+
+          <p className="mt-4">
+            Studying abroad and cross-cultural learning is allowing students to
+            transcend traditional structures and expand their worldview. We,
+            EduGlobal Gateway, provide students with the best academic and career
+            guidance as well as opportunities for higher education abroad. We believe
+            that by studying abroad, you don’t only get an international degree but
+            also learn new cultural norms and how the society functions.
+          </p>
+
+          <p className="mt-4">
+            EduGlobal Gateway truly understands that selecting the right program
+            and university is an important decision in every student’s life. Therefore,
+            we provide a wide spectrum of personalized services that includes career
+            counselling, the best university selection and admission for the required
+            program, creating the student’s profile according to the university,
+            guiding them to sharpen their skill sets through research for their choice
+            of program, language proficiency testing, and visa application assistance.
+            Ultimately we ensure that students have access to the best options available
+            to study abroad.
+          </p>
+
+          <p className="mt-4">
+            We look forward to welcome you at EduGlobal Gateway to start your exciting
+            educational journey and ensure that you reach new heights in your pursuit
+            of the best abroad education.
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+
+  </div>
+</section>
+
       </main>
 
       <Footer />
