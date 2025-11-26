@@ -7,7 +7,7 @@ import sheenaImg from "../../assets/sheena.jpeg";
 import mayankImg from "../../assets/mayank.jpeg";
 import vandanaImg from "../../assets/vandana.jpeg";
 import siddharthImg from "../../assets/siddharth.jpeg";
-
+import adityaImg from "../../assets/aditya.jpg";
 const advisors = [
   {
     id: 1,
@@ -61,7 +61,19 @@ Deeply committed to guiding students, her international exposure and understandi
 A specialist in Cloud, SaaS, PaaS, and Industrial Internet of Things (IIoT), he has delivered impactful solutions to more than 100 global customers. His collaborative approach with stakeholders ensures solutions aligned with real-world needs.
 
 Focused strongly on the Life Sciences and Healthcare sectors, he designs scalable, high-value, future-ready systems. Passionate about guiding students in study-abroad pathways, he offers invaluable insights into global education, career planning, and adapting to international work environments.`
-  }
+  },
+
+   {
+  id: 6,
+  name: "Mr. Aditya Rana",
+  title: "Program Director – Cognizant USA",
+  image: adityaImg,
+  bio: `Mr. Aditya has over 20 years of IT consulting experience, working with leading organizations such as Cognizant, Tata Consultancy Services (TCS), and Nucleus Software. His expertise spans multiple domains, including Retail, Pharmacy, Banking, and Hospitality.
+
+A forward-thinking technology leader, he excels at integrating modern technology stacks — including Generative AI — to drive innovation and enable business transformation. His strategic mindset and deep industry experience make him a key contributor in shaping future-ready enterprise solutions.`
+}
+
+  
 ];
 
 export default function Advisors() {
