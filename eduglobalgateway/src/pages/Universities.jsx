@@ -16,7 +16,7 @@ export default function UniversitiesPage() {
         {/* Page heading */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
           <h1 className="text-4xl font-extrabold text-center text-slate-900">
-            Partner Universities
+            Partner Institutions
           </h1>
           <p className="mt-2 text-center text-slate-600">
             Explore our global academic collaborations.
