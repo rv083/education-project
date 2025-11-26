@@ -112,9 +112,9 @@ export default function Header() {
 </Link>
 
 
-          <a href="#universities" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
+          <Link to="/universities" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
             Universities
-          </a>
+          </Link>
 
           <Link to="/advisory-board" className="text-slate-700 hover:text-blue-600 transition whitespace-nowrap">
              Advisory Board

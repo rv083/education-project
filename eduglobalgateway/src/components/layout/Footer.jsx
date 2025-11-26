@@ -55,10 +55,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="text-blue-600 w-5 h-5" />
                 <a
-                  href="mailto:hello@eduglobalgateway.com"
+                  href="mailto:info@eduglobalgateway.in"
                   className="text-blue-700 hover:underline font-medium"
                 >
-                  hello@eduglobalgateway.com
+                  info@eduglobalgateway.in
                 </a>
               </li>
               <li className="flex items-center gap-3">

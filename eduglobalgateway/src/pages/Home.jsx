@@ -9,6 +9,7 @@ import Footer from '../components/layout/Footer';
 import AboutIntro from '../components/sections/AboutIntro';
 import CorporateTraining from '../components/sections/CorporateTraining';
 import CareerCounselling from '../components/sections/CareerCounselling';
+import Univ from '../components/sections/Univ';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -17,11 +18,12 @@ export default function Home() {
       <main className="pt-4">
         <Hero />
         <AboutIntro />
-        <Counters />
+        {/* <Counters /> */}
         <Countries />
         <CorporateTraining />
         <CareerCounselling />
         <ServiceGrid />
+        {/* <Univ /> */}
         <FAQ />
       </main>
       <Footer />
