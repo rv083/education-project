@@ -5,6 +5,8 @@ import About from "./pages/About";  // <-- ADD THIS
 import AdvisoryBoard from "./pages/Advisory_Board";
 import ScrollToTopOrHash from "./ScrollToTopOrHash";
 import UniversitiesPage from "./pages/Universities";
+import CountriesIndex from "./pages/countries/index";
+import America from "./pages/countries/america";
 export default function App() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function App() {
       <Route path="/about" element={<About />} />  {/* NEW ROUTE */}
       <Route path="/advisory-board" element={<AdvisoryBoard />} />
       <Route path="/universities" element={<UniversitiesPage />} />
+      <Route path="/countries" element={<CountriesIndex />} />
+      <Route path="/country/america" element={<America />} />
     </Routes>
     </>
   );
