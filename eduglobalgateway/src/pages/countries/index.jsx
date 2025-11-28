@@ -2,24 +2,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Header from "../../components/layout/Header";
+import Footer from "../../components/layout/Footer";
+
 const countries = [
-  { slug: "america", name: "USA" },
+  { slug: "America", name: "USA" },
   { slug: "uk", name: "United Kingdom" },
-  { slug: "canada", name: "Canada" },
-  // add more
+  { slug: "Canada", name: "Canada" },
+  { slug: "Belgium", name: "Belgium" },
+  // add more later
 ];
 
 export default function CountriesIndex() {
   return (
-    <main className="max-w-7xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-6">Countries</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {countries.map((c) => (
-          <Link key={c.slug} to={`/country/${c.slug}`} className="p-4 border rounded hover:shadow">
-            <h3 className="font-semibold">{c.name}</h3>
-          </Link>
-        ))}
-      </div>
-    </main>
+    <>
+      <Header />
+
+      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white pt-28 pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Page Heading */}
+          <header className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700">
+              Explore Study Destinations
+            </h1>
+            <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+              Discover top countries for international education and find the
+              right destination for your academic journey.
+            </p>
+          </header>
+
+          {/* Countries Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {countries.map((c) => (
+              <Link
+                key={c.slug}
+                to={`/country/${c.slug}`}
+                className="
+                  group p-6 rounded-2xl border border-blue-100 bg-white shadow-sm 
+                  hover:shadow-lg transition-all duration-300 
+                  hover:-translate-y-1
+                "
+              >
+                <div className="flex flex-col items-center text-center space-y-3">
+                  {/* Placeholder circle (you can replace with flag icons later) */}
+                  <div className="
+                    w-16 h-16 bg-blue-100 rounded-full 
+                    flex items-center justify-center text-blue-600 font-bold text-xl
+                    group-hover:bg-blue-200 transition
+                  ">
+                    {c.name[0]}
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-slate-800 group-hover:text-blue-700">
+                    {c.name}
+                  </h3>
+
+                  <p className="text-sm text-slate-500">
+                    Learn more about studying in {c.name}.
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Decorative floating blobs */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-60 h-60 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
+      </section>
+
+      <Footer />
+    </>
   );
 }

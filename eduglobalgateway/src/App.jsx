@@ -7,6 +7,8 @@ import ScrollToTopOrHash from "./ScrollToTopOrHash";
 import UniversitiesPage from "./pages/Universities";
 import CountriesIndex from "./pages/countries/index";
 import America from "./pages/countries/america";
+import Belgium from "./pages/countries/Belgium";
+import Canada from "./pages/countries/canada";
 export default function App() {
   return (
     <>
@@ -18,7 +20,9 @@ export default function App() {
       <Route path="/advisory-board" element={<AdvisoryBoard />} />
       <Route path="/universities" element={<UniversitiesPage />} />
       <Route path="/countries" element={<CountriesIndex />} />
-      <Route path="/country/america" element={<America />} />
+      <Route path="/country/America" element={<America />} />
+      <Route path="/country/Canada" element={<Canada />} />
+      <Route path="/country/Belgium" element={<Belgium />} />
     </Routes>
     </>
   );

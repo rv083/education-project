@@ -117,6 +117,10 @@ export default function Header() {
                 Corporate Training
               </Link>
 
+              <Link to="/countries" className="text-slate-700 hover:text-blue-600 transition">
+                Countries
+              </Link>
+
               <Link to="/universities" className="text-slate-700 hover:text-blue-600 transition">
                 Partner Institutions
               </Link>
