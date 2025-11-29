@@ -51,7 +51,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-center gap-4 md:gap-6">
         {/* Big Logo — scaled visually without increasing layout size */}
         <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-          <img src={logo} alt="EduGlobalGateway Logo" className="object-contain scale-125" />
+          <img
+            src={logo}
+            alt="EduGlobalGateway Logo"
+            className="object-contain scale-125"
+          />
         </div>
 
         {/* Big Name + Tagline */}
@@ -71,6 +75,12 @@ export default function Header() {
           {/* Desktop nav (centered links) */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center gap-6 text-[15px] font-medium flex-nowrap whitespace-nowrap">
+              <Link
+                to="/"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
+                Home
+              </Link>
               {/* Study Abroad with dropdown */}
               <div className="relative group">
                 <button
@@ -106,30 +116,45 @@ export default function Header() {
                 </div>
               </div>
 
-              <Link to="/" className="text-slate-700 hover:text-blue-600 transition">
-                Home
-              </Link>
-              <Link to="/#career" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/#career"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 Career Counselling
               </Link>
 
-              <Link to="/#corporate" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/#corporate"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 Corporate Training
               </Link>
 
-              <Link to="/countries" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/countries"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 Countries
               </Link>
 
-              <Link to="/universities" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/universities"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 Partner Institutions
               </Link>
 
-              <Link to="/advisory-board" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/advisory-board"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 Advisory Board
               </Link>
 
-              <Link to="/about" className="text-slate-700 hover:text-blue-600 transition">
+              <Link
+                to="/about"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
                 About Us
               </Link>
             </div>
@@ -151,12 +176,34 @@ export default function Header() {
               aria-expanded={mobileOpen}
             >
               {mobileOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
@@ -174,52 +221,80 @@ export default function Header() {
                 >
                   Study Abroad
                   <svg
-                    className={`w-4 h-4 transition-transform ${studyDropdownOpen ? "rotate-180" : ""}`}
+                    className={`w-4 h-4 transition-transform ${
+                      studyDropdownOpen ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
 
                 {studyDropdownOpen && (
                   <div className="mt-1 ml-4 flex flex-col gap-1">
-                    {["IELTS / PTE", "SOP / LOR", "Profiling"].map((item, i) => (
-                      <a key={i} href="#" className="px-2 py-2 rounded hover:bg-blue-50 text-slate-700">
-                        {item}
-                      </a>
-                    ))}
+                    {["IELTS / PTE", "SOP / LOR", "Profiling"].map(
+                      (item, i) => (
+                        <a
+                          key={i}
+                          href="#"
+                          className="px-2 py-2 rounded hover:bg-blue-50 text-slate-700"
+                        >
+                          {item}
+                        </a>
+                      )
+                    )}
                   </div>
                 )}
               </li>
 
               <li>
-                <Link to="/#career" className="block px-2 py-2 rounded hover:bg-blue-50">
+                <Link
+                  to="/#career"
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
                   Career Counselling
                 </Link>
               </li>
 
               <li>
-                <Link to="/#corporate" className="block px-2 py-2 rounded hover:bg-blue-50">
+                <Link
+                  to="/#corporate"
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
                   Corporate Training
                 </Link>
               </li>
 
               <li>
-                <a href="#universities" className="block px-2 py-2 rounded hover:bg-blue-50">
+                <a
+                  href="#universities"
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
                   Universities
                 </a>
               </li>
 
               <li>
-                <Link to="/advisory-board" className="block px-2 py-2 rounded hover:bg-blue-50">
+                <Link
+                  to="/advisory-board"
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
                   Advisory Board
                 </Link>
               </li>
 
               <li>
-                <Link to="/about" className="block px-2 py-2 rounded hover:bg-blue-50">
+                <Link
+                  to="/about"
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
                   About Us
                 </Link>
               </li>
