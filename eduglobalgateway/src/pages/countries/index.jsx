@@ -10,6 +10,8 @@ const countries = [
   { slug: "uk", name: "United Kingdom" },
   { slug: "Canada", name: "Canada" },
   { slug: "Belgium", name: "Belgium" },
+  { slug: "Denmark", name: "Denmark" },
+  { slug: "Australia", name: "Australia" },
   // add more later
 ];
 
