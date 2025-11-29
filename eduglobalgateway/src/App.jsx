@@ -8,7 +8,7 @@ import UniversitiesPage from "./pages/Universities";
 import CountriesIndex from "./pages/countries/index";
 import America from "./pages/countries/america";
 import Belgium from "./pages/countries/Belgium";
-import Canada from "./pages/countries/canada";
+import Canada from "./pages/countries/Canada";
 export default function App() {
   return (
     <>
