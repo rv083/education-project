@@ -187,49 +187,35 @@ export default function Header() {
         {mobileOpen && (
           <div className="md:hidden bg-white border-t shadow-md py-3">
             <ul className="flex flex-col gap-1 text-base font-medium px-4">
+              {/* ADDED: Home */}
               <li>
-                <button
-                  className="w-full flex justify-between items-center px-2 py-2 rounded hover:bg-blue-50"
-                  onClick={() => setStudyDropdownOpen((s) => !s)}
+                <Link
+                  to="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-2 py-2 rounded hover:bg-blue-50 text-slate-700"
                 >
-                  Study Abroad
-                  <svg
-                    className={`w-4 h-4 transition-transform ${
-                      studyDropdownOpen ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {studyDropdownOpen && (
-                  <div className="mt-1 ml-4 flex flex-col gap-1">
-                    {["IELTS / PTE", "SOP / LOR", "Profiling"].map(
-                      (item, i) => (
-                        <a
-                          key={i}
-                          href="#"
-                          className="px-2 py-2 rounded hover:bg-blue-50 text-slate-700"
-                        >
-                          {item}
-                        </a>
-                      )
-                    )}
-                  </div>
-                )}
+                  Home
+                </Link>
               </li>
+
+              {/* ADDED: Services */}
+              <li>
+                <Link
+                  to="/services"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-2 py-2 rounded hover:bg-blue-50 text-slate-700"
+                >
+                  Services
+                </Link>
+              </li>
+
+              {/* Study Abroad dropdown (keeps original behavior) */}
+              
 
               <li>
                 <Link
                   to="/#career"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2 rounded hover:bg-blue-50"
                 >
                   Career Counselling
@@ -239,24 +225,36 @@ export default function Header() {
               <li>
                 <Link
                   to="/#corporate"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2 rounded hover:bg-blue-50"
                 >
                   Corporate Training
                 </Link>
               </li>
-
+              
               <li>
-                <a
-                  href="#universities"
+                <Link
+                  to="/countries"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2 rounded hover:bg-blue-50"
                 >
-                  Universities
-                </a>
+                  Countries
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/universities"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-2 py-2 rounded hover:bg-blue-50"
+                >
+                  Partner Institutions
+                </Link>
               </li>
 
               <li>
                 <Link
                   to="/advisory-board"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2 rounded hover:bg-blue-50"
                 >
                   Advisory Board
@@ -266,6 +264,7 @@ export default function Header() {
               <li>
                 <Link
                   to="/about"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2 rounded hover:bg-blue-50"
                 >
                   About Us
@@ -275,6 +274,7 @@ export default function Header() {
               <li>
                 <a
                   href="#contact"
+                  onClick={() => setMobileOpen(false)}
                   className="mt-2 px-4 py-2 rounded-md bg-blue-600 text-white text-center block hover:bg-blue-700 transition"
                 >
                   Contact
