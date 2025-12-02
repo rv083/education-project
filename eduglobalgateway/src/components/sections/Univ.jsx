@@ -44,10 +44,10 @@ export const universitiesSample = [
   },
   {
     id: 6,
-    name: "National University of Singapore (NUS)",
-    logoUrl:
-      "https://upload.wikimedia.org/wikipedia/en/9/9e/National_University_of_Singapore_logo.svg",
-    websiteUrl: "https://www.nus.edu.sg/",
+    name: "University of Central Lancashire (UNCL) , UK",
+    logoUrl:      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC5nfWgHTo2aFy8vqaQScyv7XxuyogqNkBb5KbzQoKyba6wzXqhhUp5bxDNvHYMYKQU8&usqp=CAU",
+
+    websiteUrl: "https://www.lancashire.ac.uk/",
   },
 ];
 

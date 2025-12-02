@@ -6,8 +6,8 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 // Leave images empty for now
-const heroBelgium = "";
-const universitiesBelgium = "";
+const heroBelgium = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Belgium1.jpg";
+const universitiesBelgium = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Belgium3.webp";
 
 export default function Belgium() {
   const data = {
@@ -51,14 +51,43 @@ export default function Belgium() {
 
     universities: {
       list: [
-        "KU Leuven — QS World Rank 2026: 60 | Known For: Engineering, Sciences, Law",
-        "Ghent University — QS World Rank 2026: 162 | Known For: Life Sciences, Engineering",
-        "Université catholique de Louvain (UCL) — QS World Rank 2026: 191 | Known For: Humanities, Theology",
-        "Université libre de Bruxelles (ULB) — QS World Rank 2026: 227 | Known For: Medicine, Social Sciences",
-        "University of Antwerp — QS World Rank 2026: 280 | Known For: Arts, Sciences",
-        "Vrije Universiteit Brussel (VUB) — QS World Rank 2026: 294 | Known For: Business, Engineering",
-        "Université de Liège — QS World Rank 2026: 379 | Known For: Medicine, Environment",
-      ],
+  {
+    name: "KU Leuven",
+    rank: 60,
+    knownFor: ["Engineering", "Sciences", "Law"]
+  },
+  {
+    name: "Ghent University",
+    rank: 162,
+    knownFor: ["Life Sciences", "Engineering"]
+  },
+  {
+    name: "Université catholique de Louvain (UCL)",
+    rank: 191,
+    knownFor: ["Humanities", "Theology"]
+  },
+  {
+    name: "Université libre de Bruxelles (ULB)",
+    rank: 227,
+    knownFor: ["Medicine", "Social Sciences"]
+  },
+  {
+    name: "University of Antwerp",
+    rank: 280,
+    knownFor: ["Arts", "Sciences"]
+  },
+  {
+    name: "Vrije Universiteit Brussel (VUB)",
+    rank: 294,
+    knownFor: ["Business", "Engineering"]
+  },
+  {
+    name: "Université de Liège",
+    rank: 379,
+    knownFor: ["Medicine", "Environment"]
+  }
+]
+,
       photo: universitiesBelgium,
     },
 

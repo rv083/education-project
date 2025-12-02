@@ -8,17 +8,38 @@ import mayankImg from "../../assets/mayank.jpeg";
 import vandanaImg from "../../assets/vandana.jpeg";
 import siddharthImg from "../../assets/siddharth.jpeg";
 import adityaImg from "../../assets/aditya.jpg";
+import sourabhImg from "../../assets/sourabh.jpg";
 const advisors = [
   {
     id: 1,
     name: "Prof. (Dr.) Vikram Singh",
     title: "Retired Director General of Police (DGP) – Uttar Pradesh",
     image: vikramImg,
-    bio: `Retired Director General of Police (DGP) Uttar Pradesh, needs no elaborate introduction as he is a well-renowned name in the nation for his tireless efforts for curbing crime and establishing law and order in the society. A person with high integrity, discipline, and character, Prof. (Dr.) Vikram Singh is a household name when it comes to voicing opinion on matters of public importance. He is regularly invited on media channels like Aaj Tak, ABP news, Times Now, Republic, Zee news, India TV, NDTV 24/7, India Today and others for voicing his expert views on socio-economic and political issues encountered by the nation. Further, he is popular for his TEDX talk on “How Youth can emerge as winners?” He is rated as a star trainer and speaker on issues related to security, man-management, crisis resolution team building, values and ethics. The Limca book of records mentions him as “Most Decorated Police officer” in the year 2014. Several gallantry awards namely, President’s Police Medal for Gallantry – 1986 , Bar to President’s Police Medal for Gallantry – 1987, President’s Police Medal for Gallantry – 1988, Bar to President’s Police Medal for Gallantry – 1989, President’s Police Medal for Long and Meritorious Service – 1990, President’s Police Medal for Distinguished Service – 1996, Kathin Seva Medal – 2001, Bar to Kathin Seva Medal – 2002 and other awards to his credit makes him a highly respectable professional in police and education circles alike. He has directly worked for the modernization and induction of state-of-the-art technology and universal best practices to make police effective and people friendly. He completed M. Sc. from Allahabad University in 1972 and Ph. D. in Ecology from Kumaon University in 1990. He has authored 3 books till now entitled, “Ecosystems of Central Himalayas”, “Human Rights and Police” and “Chambal Dacoits-BAAGHIS OR BANDITS”. He has been awarded by National Human Rights Commission (NHRC) for his book entitled, “Human Rights and Police”. The university looks up to Prof. (Dr.) Vikram Singh for his experience and scholarly contributions in the strategic decisions and day-to-day working of the university. He is an admirable and adorable figure amongst the faculty members and students both and is always available as a guiding light for all concerned. He is a pool of knowledge, an excellent orator, and an inspiration for the people belonging to all the generations, especially the youth.`
+bio: `Retired Director General of Police (DGP) Uttar Pradesh, he is a well-renowned name in the nation for his tireless efforts in curbing crime and establishing law and order in society.
+
+A person with high integrity, discipline, and character, Prof. (Dr.) Vikram Singh is a household name when it comes to voicing opinions on matters of public importance.
+
+He is a pool of knowledge, an excellent orator, and an inspiration for people of all generations, especially the youth.
+
+EduGlobal Gateway looks up to Prof. (Dr.) Vikram Singh for his experience, scholarly contributions, and guidance in the strategic decisions of EduGlobal Gateway Consultancy.`
   },
 
   {
-    id: 2,
+  id: 2,
+  name: "Mr. Saurabh Mohan",
+  title: "Overseas Admissions Expert",
+  image: sourabhImg, // add image when available
+  bio: `Mr. Saurabh Mohan has more than 20 years of hands-on experience in overseas admissions across many prestigious universities.
+
+He has guided countless students toward top global institutions, helping them secure admissions in highly competitive programs.
+
+With deep expertise in the admission process, program selection, and aligning academic choices with industry requirements, he plays a crucial role at EduGlobal Gateway Consultancy.
+
+His insights and experience are a strong guiding force for EduGlobal Gateway and its students in choosing the best universities for their UG and PG programs.`
+}
+  ,
+  {
+    id: 3,
     name: "Ms. Sheena Shukla",
     title: "Commercial Strategy & Operations Leader – Google Cloud",
     image: sheenaImg,
@@ -28,7 +49,7 @@ Known for her expertise in deal strategy, data-driven decisioning, and cross-fun
   },
 
   {
-    id: 3,
+    id: 4,
     name: "Mr. Mayank Bhati",
     title: "MarTech & Customer Experience Product Leader",
     image: mayankImg,
@@ -38,7 +59,7 @@ With expertise in product strategy, analytics, and large-scale SaaS implementati
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Ms. Vandana Pareek",
     title: "Senior Business Consultant – Cleargoals, Canada",
     image: vandanaImg,
@@ -52,7 +73,7 @@ Deeply committed to guiding students, her international exposure and understandi
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Mr. Siddharth Vyas",
     title: "Enterprise Solutions Architect – Cloud, SaaS & IIoT",
     image: siddharthImg,
@@ -64,7 +85,7 @@ Focused strongly on the Life Sciences and Healthcare sectors, he designs scalabl
   },
 
    {
-  id: 6,
+  id: 7,
   name: "Mr. Aditya Rana",
   title: "Program Director – Cognizant USA",
   image: adityaImg,

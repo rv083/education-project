@@ -6,8 +6,8 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 // Leave images empty for now
-const heroDenmark = "";
-const universitiesDenmark = "";
+const heroDenmark = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Denmark2.jpg";
+const universitiesDenmark = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Denmark1.jpg";
 
 export default function Denmark() {
   const data = {
@@ -52,14 +52,43 @@ export default function Denmark() {
     // Universities
     universities: {
       list: [
-        "University of Copenhagen — QS World Rank 2026: 101 | Known for Life Sciences, Humanities, Research",
-        "Technical University of Denmark (DTU) — QS 2026: 107 | Known for Engineering, Technology, Innovation",
-        "Aarhus University — QS 2026: 131 | Known for Arts, Sciences, Social Sciences",
-        "University of Southern Denmark (SDU) — QS 2026: 303 | Known for Engineering, Health, Business",
-        "Aalborg University — QS 2026: 306 | Known for Engineering, IT, Project-based Learning",
-        "Copenhagen Business School (CBS) — QS MBA: Top 100 | Known for Business, Management",
-        "Roskilde University — QS 2026: 501 | Known for Social Sciences, Communication",
-      ],
+  {
+    name: "University of Copenhagen",
+    rank: 101,
+    knownFor: ["Life Sciences", "Humanities", "Research"]
+  },
+  {
+    name: "Technical University of Denmark (DTU)",
+    rank: 107,
+    knownFor: ["Engineering", "Technology", "Innovation"]
+  },
+  {
+    name: "Aarhus University",
+    rank: 131,
+    knownFor: ["Arts", "Sciences", "Social Sciences"]
+  },
+  {
+    name: "University of Southern Denmark (SDU)",
+    rank: 303,
+    knownFor: ["Engineering", "Health", "Business"]
+  },
+  {
+    name: "Aalborg University",
+    rank: 306,
+    knownFor: ["Engineering", "IT", "Project-based Learning"]
+  },
+  {
+    name: "Copenhagen Business School (CBS)",
+    rank: "Top 100 MBA",
+    knownFor: ["Business", "Management"]
+  },
+  {
+    name: "Roskilde University",
+    rank: 501,
+    knownFor: ["Social Sciences", "Communication"]
+  }
+]
+,
       photo: universitiesDenmark,
     },
 

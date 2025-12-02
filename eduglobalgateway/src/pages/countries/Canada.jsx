@@ -6,8 +6,8 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 // Leave images empty
-const heroCanada = "";
-const universitiesCanada = "";
+const heroCanada = "https://globalstudyoptions.in/wp-content/uploads/2023/12/canada.jpg";
+const universitiesCanada = "https://globalstudyoptions.in/wp-content/uploads/2023/12/canada1-1365x2048.jpg";
 
 export default function Canada() {
   const data = {
@@ -56,18 +56,58 @@ export default function Canada() {
 
     // Universities Section → using text table? We'll add list + description.
     universities: {
-      list: [
-        "McGill University — QS Global Rank 2026: 27 | THE World Rank 2025: 45",
-        "University of Toronto — QS Global Rank 2026: 29 | THE World Rank 2025: 21",
-        "University of British Columbia — QS Global Rank 2026: 40 | THE World Rank 2025: 41",
-        "University of Alberta — QS Global Rank 2026: 96 | THE World Rank 2025: 116",
-        "McMaster University — QS Global Rank 2026: 103 | THE World Rank 2025: 116",
-        "Université de Montréal — QS Global Rank 2026: 151 | THE World Rank 2025: 125",
-        "University of Waterloo — QS Global Rank 2026: 112 | THE World Rank 2025: 163",
-        "Western University — QS Global Rank 2026: 120 | THE World Rank 2025: 201–250",
-        "University of Calgary — QS Global Rank 2026: 182 | THE World Rank 2025: 201–250",
-        "Queen’s University — QS Global Rank 2026: 209 | THE World Rank 2025: 301–350",
-      ],
+    list: [
+  {
+    name: "McGill University",
+    rank: 27,
+    knownFor: ["—"]
+  },
+  {
+    name: "University of Toronto",
+    rank: 29,
+    knownFor: ["—"]
+  },
+  {
+    name: "University of British Columbia",
+    rank: 40,
+    knownFor: ["—"]
+  },
+  {
+    name: "University of Alberta",
+    rank: 96,
+    knownFor: ["—"]
+  },
+  {
+    name: "McMaster University",
+    rank: 103,
+    knownFor: ["—"]
+  },
+  {
+    name: "Université de Montréal",
+    rank: 151,
+    knownFor: ["—"]
+  },
+  {
+    name: "University of Waterloo",
+    rank: 112,
+    knownFor: ["—"]
+  },
+  {
+    name: "Western University",
+    rank: 120,
+    knownFor: ["—"]
+  },
+  {
+    name: "University of Calgary",
+    rank: 182,
+    knownFor: ["—"]
+  },
+  {
+    name: "Queen’s University",
+    rank: 209,
+    knownFor: ["—"]
+  }
+],
       photo: universitiesCanada,
     },
 

@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 export default function CountrySection({ data }) {
   if (!data) return null;
 
+  // helper to detect structured university items vs simple strings
+  const isStructured = (list) =>
+    Array.isArray(list) && list.length > 0 && typeof list[0] === "object";
+
   return (
     <div className="w-full text-slate-900 space-y-20">
 
@@ -71,32 +75,84 @@ export default function CountrySection({ data }) {
         </section>
       )}
 
-      {/* Top Universities */}
-      {data.universities && (
-        <section>
-          <h2 className="text-3xl font-bold text-blue-700 mb-6">
-            Top Universities
-          </h2>
+      {/* Top Universities - table + photo layout */}
+      {/* Top Universities - 3 Column Table + Photo */}
+{data.universities && (
+  <section>
+    <h2 className="text-3xl font-bold text-blue-700 mb-6">
+      Top Universities
+    </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <ul className="list-disc pl-6 text-slate-700 space-y-2">
-              {data.universities.list?.map((uni, i) => (
-                <li key={i} className="text-base font-medium">
-                  {uni}
-                </li>
-              ))}
-            </ul>
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 items-start">
 
-            {data.universities.photo && (
-              <img
-                src={data.universities.photo}
-                alt="Universities"
-                className="rounded-xl shadow-md object-cover w-full"
-              />
-            )}
-          </div>
-        </section>
+      {/* Table */}
+      <div className="overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-slate-200">
+            <thead className="bg-slate-50">
+              <tr>
+                <th className="px-4 py-3 text-left text-sm font-medium text-slate-600">
+                  University Name
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-slate-600">
+                  QS World Rank
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-slate-600">
+                  Known For
+                </th>
+              </tr>
+            </thead>
+
+            <tbody className="divide-y divide-slate-100 bg-white">
+
+              {/* If structured objects */}
+              {Array.isArray(data.universities.list) &&
+              data.universities.list.length > 0 &&
+              typeof data.universities.list[0] === "object"
+                ? data.universities.list.map((uni, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50">
+                      <td className="px-4 py-3 text-sm font-medium text-slate-800">
+                        {uni.name}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-slate-700">
+                        {uni.rank ?? "—"}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-slate-700">
+                        {Array.isArray(uni.knownFor)
+                          ? uni.knownFor.join(", ")
+                          : uni.knownFor ?? "—"}
+                      </td>
+                    </tr>
+                  ))
+                : // Fallback: simple array of strings
+                  data.universities.list?.map((name, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50">
+                      <td className="px-4 py-3 text-sm font-medium text-slate-800">
+                        {name}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-slate-700">—</td>
+                      <td className="px-4 py-3 text-sm text-slate-700">—</td>
+                    </tr>
+                  ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Photo */}
+      {data.universities.photo && (
+        <div className="w-full h-full flex items-start lg:items-stretch">
+          <img
+            src={data.universities.photo}
+            alt="Universities"
+            className="w-full h-72 lg:h-full rounded-xl object-cover shadow-md"
+          />
+        </div>
       )}
+    </div>
+  </section>
+)}
+
 
       {/* Eligibility */}
       {data.eligibility && (

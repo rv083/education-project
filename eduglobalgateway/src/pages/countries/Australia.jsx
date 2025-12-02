@@ -6,8 +6,8 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 // Leave images empty for now
-const heroAustralia = "";
-const universitiesAustralia = "";
+const heroAustralia = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Australia.jpg";
+const universitiesAustralia = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Australia2.webp";
 
 export default function Australia() {
   const data = {
@@ -61,17 +61,109 @@ export default function Australia() {
     // Top Universities (converted from table)
     universities: {
       list: [
-        "University of Melbourne — QS World Rank 2025: 19",
-        "University of New South Wales (UNSW) — QS World Rank 2025: 19",
-        "University of Sydney — QS World Rank 2025: 25",
-        "Australian National University (ANU) — QS World Rank 2025: 32",
-        "Monash University — QS World Rank 2025: 36",
-        "University of Queensland — QS World Rank 2025: 42",
-        "University of Western Australia — QS World Rank 2025: 77",
-        "University of Adelaide — QS World Rank 2025: 82",
-        "University of Technology Sydney — QS World Rank 2025: 96",
-        "Macquarie University — QS World Rank 2025: 125",
-      ],
+  {
+    name: "University of Melbourne",
+    rank: 19,
+    knownFor: [
+      "Medicine",
+      "Business & Management",
+      "Life Sciences",
+      "Law"
+    ]
+  },
+  {
+    name: "University of New South Wales (UNSW)",
+    rank: 19,
+    knownFor: [
+      "Engineering",
+      "Business",
+      "Computer Science",
+      "Law"
+    ]
+  },
+  {
+    name: "University of Sydney",
+    rank: 25,
+    knownFor: [
+      "Health & Medical Sciences",
+      "Law",
+      "Business",
+      "Arts & Humanities"
+    ]
+  },
+  {
+    name: "Australian National University (ANU)",
+    rank: 32,
+    knownFor: [
+      "Politics & International Relations",
+      "Social Sciences",
+      "Earth Sciences",
+      "Computer Science"
+    ]
+  },
+  {
+    name: "Monash University",
+    rank: 36,
+    knownFor: [
+      "Pharmacy & Pharmacology",
+      "Engineering",
+      "Business",
+      "Medicine"
+    ]
+  },
+  {
+    name: "University of Queensland",
+    rank: 42,
+    knownFor: [
+      "Life Sciences",
+      "Environmental Sciences",
+      "Engineering",
+      "Business"
+    ]
+  },
+  {
+    name: "University of Western Australia",
+    rank: 77,
+    knownFor: [
+      "Life Sciences",
+      "Agriculture",
+      "Earth Sciences",
+      "Business"
+    ]
+  },
+  {
+    name: "University of Adelaide",
+    rank: 82,
+    knownFor: [
+      "Engineering",
+      "Wine Science",
+      "Health Sciences",
+      "Physical Sciences"
+    ]
+  },
+  {
+    name: "University of Technology Sydney",
+    rank: 96,
+    knownFor: [
+      "Engineering & Technology",
+      "Computer Science",
+      "Business",
+      "Design & Innovation"
+    ]
+  },
+  {
+    name: "Macquarie University",
+    rank: 125,
+    knownFor: [
+      "Linguistics",
+      "Finance & Accounting",
+      "Earth & Planetary Sciences",
+      "Business"
+    ]
+  }
+]
+
+,
       photo: universitiesAustralia,
     },
 
