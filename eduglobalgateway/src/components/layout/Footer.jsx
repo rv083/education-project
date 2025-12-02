@@ -86,57 +86,72 @@ export default function Footer() {
             </ul>
 
             <p className="text-slate-500 mt-6 text-sm">
-              Address: Lucknow, Uttar Pradesh, India
+              Address: 2nd floor, Shree Krishna Complex, Sector 104, Noida, Uttar Pradesh 201301
             </p>
           </motion.div>
 
           {/* Right: Contact Form */}
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            // Later you'll replace this action with your Formspree link
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Message sent (placeholder — integrate Formspree later)");
-            }}
-            className="bg-white p-8 rounded-2xl shadow-md border border-blue-100"
-          >
-            <h4 className="text-xl font-bold text-blue-800 mb-4">Send us a Message</h4>
+  initial={{ opacity: 0, x: 30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                name="name"
-                type="text"
-                placeholder="Your Name"
-                required
-                className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none transition"
-              />
-              <input
-                name="contact"
-                type="text"
-                placeholder="Email or Phone"
-                required
-                className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none transition"
-              />
-            </div>
+    const form = e.target;
+    const data = new FormData(form);
 
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="w-full p-3 border rounded-md mt-4 focus:ring-2 focus:ring-blue-300 outline-none transition"
-            ></textarea>
+    const res = await fetch("https://formspree.io/f/xkgdbzqy", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
 
-            <button
-              type="submit"
-              className="mt-6 w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition"
-            >
-              Send Message
-            </button>
-          </motion.form>
+    if (res.ok) {
+      alert("Message Sent Successfully!");
+      form.reset();
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }}
+  className="bg-white p-8 rounded-2xl shadow-md border border-blue-100"
+>
+  <h4 className="text-xl font-bold text-blue-800 mb-4">Send us a Message</h4>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input
+      name="name"
+      type="text"
+      placeholder="Your Name"
+      required
+      className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none transition"
+    />
+    <input
+      name="contact"
+      type="text"
+      placeholder="Email or Phone"
+      required
+      className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none transition"
+    />
+  </div>
+
+  <textarea
+    name="message"
+    rows="5"
+    placeholder="Your Message"
+    required
+    className="w-full p-3 border rounded-md mt-4 focus:ring-2 focus:ring-blue-300 outline-none transition"
+  ></textarea>
+
+  <button
+    type="submit"
+    className="mt-6 w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition"
+  >
+    Send Message
+  </button>
+</motion.form>
+
         </div>
 
         {/* Footer Bottom */}
