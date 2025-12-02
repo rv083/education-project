@@ -61,7 +61,7 @@ export default function Header() {
         {/* Big Name + Tagline */}
         <div className="flex flex-col text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 leading-tight">
-            EduGlobalGateway
+            EduGlobal Gateway
           </h1>
           <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1">
             Your pathway to study abroad
