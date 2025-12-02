@@ -82,40 +82,13 @@ export default function Header() {
                 Home
               </Link>
               {/* Study Abroad with dropdown */}
-              <div className="relative group">
-                <button
-                  className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition"
-                  aria-haspopup="true"
-                >
-                  Study Abroad
-                  <svg
-                    className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                <div className="absolute left-1/2 -translate-x-1/2 mt-3 w-56 bg-white/95 border border-blue-50 rounded-xl shadow-lg opacity-0 pointer-events-none transform translate-y-3 scale-95 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out backdrop-blur-sm">
-                  {["IELTS / PTE", "SOP / LOR", "Profiling"].map((item, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="block px-5 py-3 text-sm text-slate-700 hover:bg-blue-50/70 hover:text-blue-700 rounded-lg transition-colors duration-200 text-center whitespace-nowrap"
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
+              
+              <Link
+                to="/services"
+                className="text-slate-700 hover:text-blue-600 transition"
+              >
+                Services
+              </Link>
               <Link
                 to="/#career"
                 className="text-slate-700 hover:text-blue-600 transition"

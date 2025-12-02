@@ -11,6 +11,7 @@ import Belgium from "./pages/countries/Belgium";
 import Denmark from "./pages/countries/Denmark";
 import Australia from "./pages/countries/Australia";
 import Canada from "./pages/countries/Canada";
+import Services from "./pages/Services";
 export default function App() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function App() {
       <Route path="/country/Belgium" element={<Belgium />} />
       <Route path="/country/Denmark" element={<Denmark />} />
       <Route path="/country/Australia" element={<Australia />} />
+      <Route path="/services" element={<Services />} />
     </Routes>
     </>
   );
