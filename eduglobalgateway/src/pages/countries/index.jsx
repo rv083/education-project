@@ -6,14 +6,14 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 const countries = [
-  { slug: "America", name: "USA" },
-  { slug: "Ireland", name: "Ireland" },
-  { slug: "Canada", name: "Canada" },
-  { slug: "Belgium", name: "Belgium" },
-  { slug: "Denmark", name: "Denmark" },
-  { slug: "Australia", name: "Australia" },
-  { slug: "Luxembourg", name: "Luxembourg" },
-  { slug: "Italy", name: "Italy" },
+  { slug: "America", name: "USA", code: "us" },
+  { slug: "Ireland", name: "Ireland", code: "ie" },
+  { slug: "Canada", name: "Canada", code: "ca" },
+  { slug: "Belgium", name: "Belgium", code: "be" },
+  { slug: "Denmark", name: "Denmark", code: "dk" },
+  { slug: "Australia", name: "Australia", code: "au" },
+  { slug: "Luxembourg", name: "Luxembourg", code: "lu" },
+  { slug: "Italy", name: "Italy", code: "it" },
   // add more later
 ];
 
@@ -24,6 +24,7 @@ export default function CountriesIndex() {
 
       <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-6">
+          
           {/* Page Heading */}
           <header className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700">
@@ -48,14 +49,16 @@ export default function CountriesIndex() {
                 "
               >
                 <div className="flex flex-col items-center text-center space-y-3">
-                  {/* Placeholder circle (you can replace with flag icons later) */}
-                  <div className="
-                    w-16 h-16 bg-blue-100 rounded-full 
-                    flex items-center justify-center text-blue-600 font-bold text-xl
-                    group-hover:bg-blue-200 transition
-                  ">
-                    {c.name[0]}
-                  </div>
+                  
+                  {/* Country Flag (replaces initial circle) */}
+                  <img
+                    src={`https://flagcdn.com/w80/${c.code}.png`}
+                    alt={c.name}
+                    className="
+                      w-16 h-16 rounded-full object-cover shadow-sm 
+                      group-hover:scale-105 transition-transform duration-300
+                    "
+                  />
 
                   <h3 className="text-xl font-semibold text-slate-800 group-hover:text-blue-700">
                     {c.name}
