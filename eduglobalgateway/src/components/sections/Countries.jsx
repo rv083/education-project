@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Countries() {
   const countries = [
-    { name: "Canada", code: "ca" },
-    { name: "USA", code: "us" },
-    { name: "Australia", code: "au" },
-    { name: "UK", code: "gb" },
-    { name: "Germany", code: "de" },
-    { name: "And More...", code: "fr" },
+    { name: "Canada", code: "ca", slug: "Canada" },
+    { name: "USA", code: "us", slug: "America" },
+    { name: "Australia", code: "au", slug: "Australia" },
+    { name: "Ireland", code: "ie", slug: "Ireland" },     // Updated
+    { name: "Belgium", code: "be", slug: "Belgium" },     // Updated
+    { name: "Many More...", code: "world", slug: "#" },   // Generic world icon
   ];
 
   return (
@@ -16,6 +17,7 @@ export default function Countries() {
       className="relative bg-gradient-to-b from-blue-50 to-white py-20 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
+
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -47,18 +49,29 @@ export default function Countries() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1, y: -4 }}
-              className="bg-white border border-blue-100 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl py-6 flex flex-col items-center justify-center"
+              className="bg-white border border-blue-100 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl py-6"
             >
-              {/* SVG Flag */}
-              <img
-                src={`https://flagcdn.com/w80/${country.code}.png`}
-                alt={country.name}
-                className="w-10 h-7 object-cover rounded mb-2 shadow-sm"
-              />
+              <Link
+                to={country.slug === "#" ? "/countries" : `/country/${country.slug}`}
+                className="flex flex-col items-center justify-center"
+              >
+                {/* Flag or generic world icon */}
+                {country.code !== "world" ? (
+                  <img
+                    src={`https://flagcdn.com/w80/${country.code}.png`}
+                    alt={country.name}
+                    className="w-10 h-7 object-cover rounded mb-2 shadow-sm"
+                  />
+                ) : (
+                  <div className="w-10 h-10 mb-2 flex items-center justify-center">
+                    🌍
+                  </div>
+                )}
 
-              <span className="font-semibold text-blue-700 text-sm md:text-base">
-                {country.name}
-              </span>
+                <span className="font-semibold text-blue-700 text-sm md:text-base">
+                  {country.name}
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>
