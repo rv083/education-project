@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 export default function Countries() {
   const countries = [
-    { name: "Canada", flag: "🇨🇦" },
-    { name: "USA", flag: "🇺🇸" },
-    { name: "Australia", flag: "🇦🇺" },
-    { name: "UK", flag: "🇬🇧" },
-    { name: "Germany", flag: "🇩🇪" },
-    { name: "France", flag: "🇫🇷" },
+    { name: "Canada", code: "ca" },
+    { name: "USA", code: "us" },
+    { name: "Australia", code: "au" },
+    { name: "UK", code: "gb" },
+    { name: "Germany", code: "de" },
+    { name: "France", code: "fr" },
   ];
 
   return (
@@ -26,6 +26,7 @@ export default function Countries() {
         >
           Popular Study Destinations
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +37,7 @@ export default function Countries() {
           Explore top countries where students thrive academically and culturally
         </motion.p>
 
-        {/* Grid of Countries */}
+        {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
           {countries.map((country, index) => (
             <motion.div
@@ -48,7 +49,13 @@ export default function Countries() {
               whileHover={{ scale: 1.1, y: -4 }}
               className="bg-white border border-blue-100 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl py-6 flex flex-col items-center justify-center"
             >
-              <span className="text-3xl mb-2">{country.flag}</span>
+              {/* SVG Flag */}
+              <img
+                src={`https://flagcdn.com/w80/${country.code}.png`}
+                alt={country.name}
+                className="w-10 h-7 object-cover rounded mb-2 shadow-sm"
+              />
+
               <span className="font-semibold text-blue-700 text-sm md:text-base">
                 {country.name}
               </span>
@@ -57,12 +64,13 @@ export default function Countries() {
         </div>
       </div>
 
-      {/* Decorative Gradient Blobs */}
+      {/* Decorative blobs */}
       <motion.div
         className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
         animate={{ y: [0, -20, 0] }}
         transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
       />
+
       <motion.div
         className="absolute -top-10 right-0 w-52 h-52 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
         animate={{ y: [0, 20, 0] }}

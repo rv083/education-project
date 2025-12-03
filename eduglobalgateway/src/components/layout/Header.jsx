@@ -89,7 +89,7 @@ export default function Header() {
               >
                 Services
               </Link>
-              <Link
+              {/* <Link
                 to="/#career"
                 className="text-slate-700 hover:text-blue-600 transition"
               >
@@ -101,7 +101,7 @@ export default function Header() {
                 className="text-slate-700 hover:text-blue-600 transition"
               >
                 Corporate Training
-              </Link>
+              </Link> */}
 
               <Link
                 to="/countries"
