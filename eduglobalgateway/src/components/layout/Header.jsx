@@ -64,7 +64,7 @@ export default function Header() {
             EduGlobal Gateway
           </h1>
           <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1">
-            Your pathway to study abroad
+            Empower You With Global Education
           </p>
         </div>
       </div>

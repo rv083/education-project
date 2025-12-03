@@ -20,8 +20,8 @@ export default function Home() {
         <AboutIntro />
         {/* <Counters /> */}
         <Countries />
-        <CorporateTraining />
-        <CareerCounselling />
+        {/* <CorporateTraining />
+        <CareerCounselling /> */}
         <ServiceGrid />
         {/* <Univ /> */}
         <FAQ />
