@@ -7,7 +7,7 @@ export default function Countries() {
     { name: "Australia", code: "au" },
     { name: "UK", code: "gb" },
     { name: "Germany", code: "de" },
-    { name: "France", code: "fr" },
+    { name: "And More...", code: "fr" },
   ];
 
   return (

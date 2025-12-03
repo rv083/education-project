@@ -1,8 +1,8 @@
 // src/pages/countries/America.jsx
 import React from "react";
 import CountrySection from "../../components/sections/CountrySection";
-import heroUSA from "../../assets/usa.jpeg";
-import universitiesUSA from "../../assets/usa-universities.jpeg";
+import heroUSA from "../../assets/mit_univ.jpeg";
+import USAside from "../../assets/usa_side.jpg";
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
@@ -15,7 +15,7 @@ export default function America() {
     description:
       "The United States of America, a federal republic of 50 states, is a vast country known for its diverse landscapes, vibrant cities, and status as the world’s foremost economic and military power. A global leader in technology, innovation, and culture, the U.S. offers a dynamic environment for students from across the world, making it a premier destination for higher education.",
 
-    heroImage:"https://globalstudyoptions.in/wp-content/uploads/2023/12/US-University.jpg",
+    heroImage:heroUSA,
 
     welcomingHub: {
       title: "A Welcoming Hub for Indian Students",
@@ -107,7 +107,7 @@ export default function America() {
 ]
 
 ,
-      photo: "https://globalstudyoptions.in/wp-content/uploads/2023/12/US-University1.jpg"
+      photo: USAside
     },
 
     eligibilityTitle: "Eligibility Criteria for Indian Students",

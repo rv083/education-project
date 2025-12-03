@@ -7,11 +7,13 @@ import Footer from "../../components/layout/Footer";
 
 const countries = [
   { slug: "America", name: "USA" },
-  { slug: "uk", name: "United Kingdom" },
+  { slug: "Ireland", name: "Ireland" },
   { slug: "Canada", name: "Canada" },
   { slug: "Belgium", name: "Belgium" },
   { slug: "Denmark", name: "Denmark" },
   { slug: "Australia", name: "Australia" },
+  { slug: "Luxembourg", name: "Luxembourg" },
+  { slug: "Italy", name: "Italy" },
   // add more later
 ];
 

@@ -4,10 +4,8 @@ import CountrySection from "../../components/sections/CountrySection";
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-
-// Leave images empty
-const heroCanada = "https://globalstudyoptions.in/wp-content/uploads/2023/12/canada.jpg";
-const universitiesCanada = "https://globalstudyoptions.in/wp-content/uploads/2023/12/canada1-1365x2048.jpg";
+import heroCanada from "../../assets/univ_of_toronto.jpg";
+import universitiesCanada from "../../assets/toronto_side.jpg";
 
 export default function Canada() {
   const data = {

@@ -11,6 +11,9 @@ import Belgium from "./pages/countries/Belgium";
 import Denmark from "./pages/countries/Denmark";
 import Australia from "./pages/countries/Australia";
 import Canada from "./pages/countries/Canada";
+import Ireland from "./pages/countries/Ireland";
+import Luxembourg from "./pages/countries/Luxembourg";
+import Italy from "./pages/countries/Italy";
 import Services from "./pages/Services";
 export default function App() {
   return (
@@ -28,6 +31,9 @@ export default function App() {
       <Route path="/country/Belgium" element={<Belgium />} />
       <Route path="/country/Denmark" element={<Denmark />} />
       <Route path="/country/Australia" element={<Australia />} />
+      <Route path="/country/Ireland" element={<Ireland />} />
+      <Route path="/country/Luxembourg" element={<Luxembourg />} />
+      <Route path="/country/Italy" element={<Italy />} />
       <Route path="/services" element={<Services />} />
     </Routes>
     </>

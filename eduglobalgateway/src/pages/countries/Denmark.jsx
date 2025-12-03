@@ -4,10 +4,8 @@ import CountrySection from "../../components/sections/CountrySection";
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-
-// Leave images empty for now
-const heroDenmark = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Denmark2.jpg";
-const universitiesDenmark = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Denmark1.jpg";
+import heroDenmark from "../../assets/denmark_univ.jpg";
+import universitiesDenmark from "../../assets/denmark_side.jpg";
 
 export default function Denmark() {
   const data = {

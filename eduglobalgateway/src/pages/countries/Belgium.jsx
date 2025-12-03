@@ -4,10 +4,8 @@ import CountrySection from "../../components/sections/CountrySection";
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-
-// Leave images empty for now
-const heroBelgium = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Belgium1.jpg";
-const universitiesBelgium = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Belgium3.webp";
+import heroBelgium from "../../assets/ghent_univ.jpg";
+import universitiesBelgium from "../../assets/belgium_side.jpg";
 
 export default function Belgium() {
   const data = {

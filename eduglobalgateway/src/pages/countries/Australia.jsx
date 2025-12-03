@@ -4,10 +4,8 @@ import CountrySection from "../../components/sections/CountrySection";
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-
-// Leave images empty for now
-const heroAustralia = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Australia.jpg";
-const universitiesAustralia = "https://globalstudyoptions.in/wp-content/uploads/2023/12/Australia2.webp";
+import heroAustralia from "../../assets/australia_univ.jpeg";
+import universitiesAustralia from "../../assets/australia_side.jpg";
 
 export default function Australia() {
   const data = {
