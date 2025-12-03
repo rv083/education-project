@@ -1,6 +1,6 @@
 // src/components/sections/DocumentPreparations.jsx
 import React from "react";
-// import docsImg from "../../assets/document-prep.jpg";
+import docsImg from "../../../assets/document_preparation.jpg";
 
 export default function DocumentPreparations() {
   return (
@@ -25,7 +25,7 @@ export default function DocumentPreparations() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1526318472351-c75fcf070ee5?auto=format&fit=crop&w=1200&q=60"
+          src={docsImg}
           alt="Document Preparation"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

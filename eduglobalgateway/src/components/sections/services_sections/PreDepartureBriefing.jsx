@@ -1,6 +1,6 @@
 // src/components/sections/PreDepartureBriefing.jsx
 import React from "react";
-// import prepImg from "../../assets/pre-departure.jpg";
+import prepImg from "../../../assets/pre_departure.jpg";
 
 export default function PreDepartureBriefing() {
   return (
@@ -25,7 +25,7 @@ export default function PreDepartureBriefing() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=60"
+          src={prepImg}
           alt="Pre Departure Briefing"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

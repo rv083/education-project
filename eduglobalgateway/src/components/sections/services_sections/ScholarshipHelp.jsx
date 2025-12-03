@@ -1,6 +1,6 @@
 // src/components/sections/ScholarshipHelp.jsx
 import React from "react";
-// import scholarshipImg from "../../assets/scholarship-help.jpg";
+import scholarshipImg from "../../../assets/scholarship_help.jpg";
 
 export default function ScholarshipHelp() {
   return (
@@ -24,7 +24,7 @@ export default function ScholarshipHelp() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=60"
+          src={scholarshipImg}
           alt="Scholarship Help"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

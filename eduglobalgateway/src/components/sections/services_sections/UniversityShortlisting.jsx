@@ -1,6 +1,6 @@
 // src/components/sections/UniversityShortlisting.jsx
 import React from "react";
-// import uniImg from "../../assets/university-shortlist.jpg";
+import uniImg from "../../../assets/university_shortlist.jpg";
 
 export default function UniversityShortlisting() {
   return (
@@ -28,7 +28,7 @@ export default function UniversityShortlisting() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1559757175-570a7b3d8f6f?auto=format&fit=crop&w=1200&q=60"
+          src={uniImg}
           alt="University Shortlisting"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

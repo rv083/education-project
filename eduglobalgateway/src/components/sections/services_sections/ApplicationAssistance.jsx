@@ -1,6 +1,4 @@
-// src/components/sections/ApplicationAssistance.jsx
-import React from "react";
-// import appImg from "../../assets/application-assistance.jpg";
+import appImg from "../../../assets/app_assist.jpg";
 
 export default function ApplicationAssistance() {
   return (
@@ -26,7 +24,7 @@ export default function ApplicationAssistance() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=60"
+          src={appImg}
           alt="Application Assistance"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

@@ -1,6 +1,6 @@
 // src/components/sections/VisaGuidance.jsx
 import React from "react";
-// import visaImg from "../../assets/visa-guidance.jpg";
+import visaImg from "../../../assets/visa_guidance.jpg";
 
 export default function VisaGuidance() {
   return (
@@ -24,7 +24,7 @@ export default function VisaGuidance() {
 
       <div>
         <img
-          src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=60"
+          src={visaImg}
           alt="Visa Guidance"
           className="rounded-xl w-full h-80 object-cover shadow-md"
         />

@@ -1,5 +1,9 @@
 // src/components/sections/TestPreparation.jsx
 import React from "react";
+import ieltsImg from "../../../assets/ielts_img.jpg"
+import toeflImg from "../../../assets/toefl_img.jpg"
+import pteImg from "../../../assets/pte_img.jpg"
+import satImg from "../../../assets/sat_img.jpg"
 
 export default function TestPreparation() {
   return (
@@ -73,7 +77,7 @@ export default function TestPreparation() {
           </div>
 
           <img
-            src="https://globalstudyoptions.in/wp-content/uploads/2025/07/IELTS.jpg"
+            src={ieltsImg}
             alt="IELTS"
             className="rounded-xl w-full h-80 object-cover shadow-md"
           />
@@ -107,7 +111,7 @@ export default function TestPreparation() {
           </div>
 
           <img
-            src="https://globalstudyoptions.in/wp-content/uploads/2025/07/TOEFL.jpg"
+            src={toeflImg}
             alt="TOEFL"
             className="rounded-xl w-full h-80 object-cover shadow-md"
           />
@@ -141,7 +145,7 @@ export default function TestPreparation() {
           </div>
 
           <img
-            src="https://globalstudyoptions.in/wp-content/uploads/2025/07/PTE.jpg"
+            src={pteImg}
             alt="PTE"
             className="rounded-xl w-full h-80 object-cover shadow-md"
           />
@@ -175,7 +179,7 @@ export default function TestPreparation() {
           </div>
 
           <img
-            src="https://globalstudyoptions.in/wp-content/uploads/2025/07/SAT.jpg"
+            src={satImg}
             alt="SAT"
             className="rounded-xl w-full h-80 object-cover shadow-md"
           />
