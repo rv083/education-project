@@ -212,7 +212,7 @@ export default function Header() {
               {/* Study Abroad dropdown (keeps original behavior) */}
               
 
-              <li>
+              {/* <li>
                 <Link
                   to="/#career"
                   onClick={() => setMobileOpen(false)}
@@ -230,7 +230,7 @@ export default function Header() {
                 >
                   Corporate Training
                 </Link>
-              </li>
+              </li> */}
               
               <li>
                 <Link
