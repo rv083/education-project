@@ -10,6 +10,27 @@ export default function AboutIntro() {
         </p>
 
         <div className="mt-8 text-slate-700 leading-relaxed space-y-5 text-justify">
+
+          <p className="font-semibold text-blue-700 text-2xl text-justify">
+  Your Dream, Our Guidance – Together Toward Global Success.
+</p>
+
+          <p>
+            For Indian students, studying abroad is more than just earning a
+            degree – it’s a life-changing experience. International education
+            opens doors to world-class universities, advanced research
+            opportunities, and global career prospects. It helps students gain
+            exposure to diverse cultures, develop independent thinking, and build
+            a strong international network.
+          </p>
+
+          <p>
+            In today’s competitive world, a foreign degree not only enhances
+            knowledge and skills but also gives students a global edge in
+            employability. Beyond academics, it nurtures confidence,
+            adaptability, and a broader outlook – qualities that shape successful
+            careers and meaningful lives.
+          </p>
           <p>
             At EduGlobal Gateway, we believe that the right guidance can turn
             dreams into reality. With a strong commitment to helping students
@@ -31,26 +52,10 @@ export default function AboutIntro() {
           <p>
             With a focus on trust, transparency, and success, EduGlobal Gateway
             stands as a one-stop solution for all your international education
-            and training needs. Your dream, our guidance – together toward global
-            success.
+            and training needs.
           </p>
 
-          <p>
-            For Indian students, studying abroad is more than just earning a
-            degree – it’s a life-changing experience. International education
-            opens doors to world-class universities, advanced research
-            opportunities, and global career prospects. It helps students gain
-            exposure to diverse cultures, develop independent thinking, and build
-            a strong international network.
-          </p>
-
-          <p>
-            In today’s competitive world, a foreign degree not only enhances
-            knowledge and skills but also gives students a global edge in
-            employability. Beyond academics, it nurtures confidence,
-            adaptability, and a broader outlook – qualities that shape successful
-            careers and meaningful lives.
-          </p>
+          
 
           <p className="font-semibold text-blue-700 text-center">
             Hence, be a part of EduGlobal Gateway.
