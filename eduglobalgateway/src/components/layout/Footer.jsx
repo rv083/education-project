@@ -97,24 +97,24 @@ export default function Footer() {
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
   onSubmit={async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = e.target;
-    const data = new FormData(form);
+  const form = e.target;
+  const data = new FormData(form);
 
-    const res = await fetch("https://formspree.io/f/xkgdbzqy", {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: data,
-    });
+  const res = await fetch("https://formspree.io/f/xkgdbzqy", {
+    method: "POST",
+    headers: { Accept: "application/json" },
+    body: data,
+  });
 
-    if (res.ok) {
-      alert("Message Sent Successfully!");
-      form.reset();
-    } else {
-      alert("Something went wrong. Please try again.");
-    }
-  }}
+  if (res.ok) {
+    window.location.href = "/thank-you";
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+}}
+
   className="bg-white p-8 rounded-2xl shadow-md border border-blue-100"
 >
   <h4 className="text-xl font-bold text-blue-800 mb-4">Send us a Message</h4>

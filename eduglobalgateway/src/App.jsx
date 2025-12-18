@@ -15,6 +15,8 @@ import Ireland from "./pages/countries/Ireland";
 import Luxembourg from "./pages/countries/Luxembourg";
 import Italy from "./pages/countries/Italy";
 import Services from "./pages/Services";
+import ThankYou from "./pages/ThankYou";
+
 export default function App() {
   return (
     <>
@@ -35,6 +37,8 @@ export default function App() {
       <Route path="/country/Luxembourg" element={<Luxembourg />} />
       <Route path="/country/Italy" element={<Italy />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/thank-you" element={<ThankYou />} />
+
     </Routes>
     </>
   );

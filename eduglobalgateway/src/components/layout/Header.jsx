@@ -48,26 +48,29 @@ export default function Header() {
       style={{ willChange: "transform" }}
     >
       {/* Top: Logo and Text close together, both very large */}
-      <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-center gap-4 md:gap-6">
-        {/* Big Logo — scaled visually without increasing layout size */}
-        <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-          <img
-            src={logo}
-            alt="EduGlobalGateway Logo"
-            className="object-contain scale-125"
-          />
-        </div>
+      <Link
+  to="/"
+  className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-center gap-4 md:gap-6 cursor-pointer"
+>
+  <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+    <img
+      src={logo}
+      alt="EduGlobalGateway Logo"
+      className="object-contain scale-125"
+    />
+  </div>
 
-        {/* Big Name + Tagline */}
-        <div className="flex flex-col text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 leading-tight">
-            EduGlobal Gateway
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1">
-            Empower You With Global Education
-          </p>
-        </div>
-      </div>
+  <div className="flex flex-col text-left">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 leading-tight">
+      EduGlobal Gateway
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl font-extrabold text-slate-700 -mt-1">
+      Empower You With Global Education
+    </p>
+  </div>
+</Link>
+
+
 
       {/* Bottom: Navigation bar */}
       <nav className="w-full border-t border-b bg-white/0 relative z-40">
