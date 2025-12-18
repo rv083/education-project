@@ -15,7 +15,7 @@ import Ireland from "./pages/countries/Ireland";
 import Luxembourg from "./pages/countries/Luxembourg";
 import Italy from "./pages/countries/Italy";
 import Services from "./pages/Services";
-import ThankYou from "./pages/ThankYou";
+import ThankYou from "./pages/Thankyou";
 
 export default function App() {
   return (
