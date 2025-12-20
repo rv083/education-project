@@ -9,5 +9,6 @@ import './App.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
+    <Analytics />
   </BrowserRouter>
 );
