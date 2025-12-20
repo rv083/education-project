@@ -1,5 +1,6 @@
 // src/pages/Services.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
@@ -85,6 +86,7 @@ export default function Services() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
             {/* IELTS */}
             <div className="bg-white rounded-2xl border shadow-sm p-6 hover:shadow-md transition">
               <h3 className="text-xl font-bold text-blue-800">IELTS</h3>
@@ -92,9 +94,12 @@ export default function Services() {
                 Complete preparation for Listening, Reading, Writing, and Speaking
                 with mock tests and expert evaluation.
               </p>
-              <button className="mt-4 text-blue-600 font-semibold hover:underline">
+              <Link
+                to="/services/test-preparation/ielts"
+                className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
+              >
                 Explore IELTS →
-              </button>
+              </Link>
             </div>
 
             {/* TOEFL */}
@@ -104,9 +109,12 @@ export default function Services() {
                 TOEFL iBT coaching focused on academic English skills and real
                 exam simulations.
               </p>
-              <button className="mt-4 text-blue-600 font-semibold hover:underline">
+              <Link
+                to="/services/test-preparation/toefl"
+                className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
+              >
                 Explore TOEFL →
-              </button>
+              </Link>
             </div>
 
             {/* PTE */}
@@ -116,10 +124,14 @@ export default function Services() {
                 Computer-based training designed for speed, accuracy, and
                 high-score strategies.
               </p>
-              <button className="mt-4 text-blue-600 font-semibold hover:underline">
+              <Link
+                to="/services/test-preparation/pte"
+                className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
+              >
                 Explore PTE →
-              </button>
+              </Link>
             </div>
+
           </div>
         </section>
 

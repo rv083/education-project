@@ -16,7 +16,9 @@ import Luxembourg from "./pages/countries/Luxembourg";
 import Italy from "./pages/countries/Italy";
 import Services from "./pages/Services";
 import ThankYou from "./pages/Thankyou";
-
+import IELTS from "./pages/Ielts";
+import TOEFL from "./pages/Toefl";
+import PTE from "./pages/Pte";
 export default function App() {
   return (
     <>
@@ -38,6 +40,10 @@ export default function App() {
       <Route path="/country/Italy" element={<Italy />} />
       <Route path="/services" element={<Services />} />
       <Route path="/thank-you" element={<ThankYou />} />
+      <Route path="/services/test-preparation/ielts" element={<IELTS />}/>
+      <Route path="/services/test-preparation/toefl" element={<TOEFL />}/>
+      <Route path="/services/test-preparation/pte" element={<PTE />}/>
+
 
     </Routes>
     </>
